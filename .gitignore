@@ -1,0 +1,13 @@
+# Saídas de build do Gradle/Android
+.gradle/
+build/
+*/build/
+local.properties
+.idea/
+*.iml
+captures/
+.externalNativeBuild/
+.cxx/
+
+# Estado local do Claude Code (credenciais, histórico, caches) - nunca versionar
+.claude/

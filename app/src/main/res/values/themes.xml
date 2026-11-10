@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="Theme.VehicleEqualizerApp" parent="Theme.MaterialComponents.DayNight.NoActionBar">
+        <!-- Fundo escuro da janela, aplicado uma única vez pelo tema (evita pintura dupla no layout). -->
+        <item name="android:windowBackground">#101418</item>
+    </style>
+</resources>

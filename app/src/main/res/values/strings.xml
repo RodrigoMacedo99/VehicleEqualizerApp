@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">VehicleEqualizerApp</string>
+    <string name="app_title">Equalizador Automotivo</string>
+    <string name="equalizer_switch">Equalizador ligado</string>
+    <string name="bass_label">Graves</string>
+    <string name="mid_label">Médios</string>
+    <string name="treble_label">Agudos</string>
+    <string name="can_volume_initial">Volume CAN: aguardando</string>
+    <string name="can_volume_format">Volume CAN: %1$d</string>
+</resources>

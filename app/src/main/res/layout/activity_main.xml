@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Etapa 1: interface do equalizador automotivo com ConstraintLayout.
+     Alvos de toque grandes (mínimo de 48dp) e textos grandes, adequados para uso no carro. -->
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/rootLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="32dp">
+
+    <!-- Título principal da aplicação -->
+    <TextView
+        android:id="@+id/titleText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/app_title"
+        android:textColor="#FFFFFF"
+        android:textSize="36sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <!-- Volume recebido pela rede CAN (simulado pela MainActivity) -->
+    <TextView
+        android:id="@+id/canVolumeText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/can_volume_initial"
+        android:textColor="#9AA5B1"
+        android:textSize="22sp"
+        app:layout_constraintBottom_toBottomOf="@id/titleText"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <!-- Chave para ligar/desligar o equalizador -->
+    <androidx.appcompat.widget.SwitchCompat
+        android:id="@+id/equalizerSwitch"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:minHeight="56dp"
+        android:text="@string/equalizer_switch"
+        android:textColor="#FFFFFF"
+        android:textSize="26sp"
+        android:thumbTint="#29B6F6"
+        android:trackTint="#37474F"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/titleText" />
+
+    <!-- Graves -->
+    <TextView
+        android:id="@+id/bassLabel"
+        android:layout_width="160dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="40dp"
+        android:text="@string/bass_label"
+        android:textColor="#FFFFFF"
+        android:textSize="26sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/equalizerSwitch" />
+
+    <SeekBar
+        android:id="@+id/bassSeekBar"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:contentDescription="@string/bass_label"
+        android:max="100"
+        android:minHeight="56dp"
+        android:progress="50"
+        app:layout_constraintBottom_toBottomOf="@id/bassLabel"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/bassLabel"
+        app:layout_constraintTop_toTopOf="@id/bassLabel" />
+
+    <!-- Médios -->
+    <TextView
+        android:id="@+id/midLabel"
+        android:layout_width="160dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:text="@string/mid_label"
+        android:textColor="#FFFFFF"
+        android:textSize="26sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/bassLabel" />
+
+    <SeekBar
+        android:id="@+id/midSeekBar"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:contentDescription="@string/mid_label"
+        android:max="100"
+        android:minHeight="56dp"
+        android:progress="50"
+        app:layout_constraintBottom_toBottomOf="@id/midLabel"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/midLabel"
+        app:layout_constraintTop_toTopOf="@id/midLabel" />
+
+    <!-- Agudos -->
+    <TextView
+        android:id="@+id/trebleLabel"
+        android:layout_width="160dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:text="@string/treble_label"
+        android:textColor="#FFFFFF"
+        android:textSize="26sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/midLabel" />
+
+    <SeekBar
+        android:id="@+id/trebleSeekBar"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:contentDescription="@string/treble_label"
+        android:max="100"
+        android:minHeight="56dp"
+        android:progress="50"
+        app:layout_constraintBottom_toBottomOf="@id/trebleLabel"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/trebleLabel"
+        app:layout_constraintTop_toTopOf="@id/trebleLabel" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
